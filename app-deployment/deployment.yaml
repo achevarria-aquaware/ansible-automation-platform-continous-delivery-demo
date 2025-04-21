@@ -16,7 +16,9 @@ spec:
     spec:
       containers:
       - name: racing-game
-        image: dev-game-app:latest
+        image: quay.io/achevarria/cd:latest
+      imagePullSecrets:
+        - name: my-secret
         resources:
           limits:
             memory: "128Mi"
