@@ -17,11 +17,11 @@ spec:
       containers:
       - name: racing-game
         image: quay.io/achevarria/cd:latest
-      imagePullSecrets:
-        - name: my-secret
         resources:
           limits:
             memory: "128Mi"
             cpu: "200m"
         ports:
         - containerPort: 8080
+      imagePullSecrets:
+        - name: my-secret
